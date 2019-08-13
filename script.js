@@ -1,6 +1,5 @@
 const textInput = document.getElementById('textInput');
 const chat = document.getElementById('chat');
-
 let context = {};
 
 const templateChatMessage = (message, from) => `
