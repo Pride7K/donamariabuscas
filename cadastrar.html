@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="mdb bootstrap/css/mdb.css">
-    <link rel="stylesheet" href="inicial.css">
+    <link rel="stylesheet" href="cadastrar.css">
+    <link rel="stylesheet" href="./stylebot.css">
     <title>Cadastrar-se</title>
 </head>
 
@@ -19,8 +20,33 @@
             <div class="col-md-5" style="background: linear-gradient(to right,rgb(254,164,21),rgb(250,4,109))">
                 <a href="index.html"><img src="imagens/Maior comparador do brasil.png"></a>
             </div>
-            <div class="col-md-2" style="background-color: rgb(250,4,109)">
-            </div>
+            <div class="col-md-2 offset-md-4" style="display: flex;">
+                    <div class="divbotao" id="botaoaparecer">
+                        <input type="image" src="imagens/grandmother (3).png" >
+                        <br>
+                    </div>
+                    <p style="animation: blinker 1s linear infinite;border-radius: 15px;padding: 1%;" id="botaoaparecer3">Caso precise de
+                        ajuda eu estou aqui</p>
+                </div>
+                <div class="sumir" id="div1">
+                    <div style="background-color: brown;width: 100%;height: 100px;padding-top:5%;">
+                        <div style="margin-left: 95%;color: white;">
+                            <input type="image" src="imagens/down-arrow.png" id="buttonDivChat">
+                        </div>
+                        <div style="background-color: brown;width: 100%;text-align: center;">
+                            ASSISTENTE VIRTUAL DONA MARIA
+                        </div>
+                    </div>
+                    <div class=" chat-column" style="word-wrap: break-word;
+                                line-height: 1.25rem;">
+                        <div id="chat" style="word-wrap: break-word;
+                                  line-height: 1.25rem;"></div>
+                        <label for="textInput" class="inputOutline">
+                            <input id="textInput" class="input responsive-column" autofocus placeholder="Diga algo"
+                                type="text">
+                        </label>
+                    </div>
+                </div>
         </div>
     </div>
     <div class="container">
@@ -52,6 +78,8 @@
         </div>
     </div>
 </body>
+<script src="./script.js"></script>
+<script src="index.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>

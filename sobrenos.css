@@ -25,3 +25,23 @@ a
     text-align: justify;
     font-size: 20px;
 }
+.divbotao
+{
+    text-align: center;
+}
+.sumir
+{
+    display: none;
+}
+.adicionar
+{
+    z-index: 1;
+    position: fixed ;
+    left: 77%;
+    top: 50%;
+}
+@keyframes blinker {
+    50% {
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.267);
+    }
+  }
