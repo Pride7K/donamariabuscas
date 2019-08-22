@@ -1,7 +1,7 @@
 # donamariabuscas - Comparador de preços
 TCC para etec
 
->navegue até o diretório do projeto
+>abra o cmd e navegue até o diretório do projeto
 
 >execute npm install para trazer as bibliotecas utilizadas.
 
