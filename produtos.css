@@ -35,19 +35,13 @@ html,body
 }
 .cards
 {
-    height: 40%;
-    width: 30%;
+    height: 100%;
+    width: 100%;
     background-color: whitesmoke;
     border-radius: 15px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.315);
     box-sizing: border-box;
     margin: 3%;
-    transition: 0.5s;
-}
-.cards:hover
-{
-    transition: 2s;
-    transform: scale(1.3);
 }
 .imgcards
 {

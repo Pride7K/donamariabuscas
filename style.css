@@ -34,9 +34,8 @@
 {
     z-index: 1;
     position: fixed ;
-    left: 75%;
-    right: 2%;
-    top: 45%;
+    left: 77%;
+    top: 50%;
 }
 @keyframes blinker {
     50% {

@@ -1,7 +1,7 @@
 <html lang="pt-br">
 
 <head>
-    <title>Produtos</title>
+    <title>Simple Chat - Watson</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Guilherme Santos">
@@ -9,6 +9,7 @@
     <meta name="keywords" content="">
     <link rel="stylesheet" href="produtos.css">
     <link rel="stylesheet" href="./stylebot.css">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="mdb bootstrap/css/mdb.css">
     <link rel="icon" href="imagens/logotipo.png">
@@ -28,8 +29,7 @@
             </div>
         </div>
         <div class="row" style="background-color: rgb(250,4,109);">
-            <div class="col-md-5 offset-md-4"
-                style="background-color: rgb(250,4,109);text-align: center;padding-top:1%;">
+            <div class="col-md-5 offset-md-4" style="background-color: rgb(250,4,109);text-align: center;">
                 <ul style="list-style-type: none;display: flex;">
                     <li><a href="produtos.html" class="links" style="border-bottom: 2px solid white;">Produtos</a></li>
                     &nbsp;&nbsp;&nbsp;
@@ -78,72 +78,100 @@
         <div class="row">
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12" style="display: flex;">
-                <div class="cards">
-                    <p class="paragrafos">Arroz</p>
-                    <img src="imagens/produtos/arroz.png" class="imgcards">
-                </div>
-                <div class="cards">
-                    <p class="paragrafos">Feijão</p>
-                    <img src="imagens/produtos/feijao.png" class="imgcards">
-                </div>
-                <div class="cards">
-                    <p class="paragrafos">Óleo de cozinha</p>
-                    <img src="imagens/produtos/oleo.png" class="imgcards">
-                </div>
-                <div class="cards">
-                    <p class="paragrafos">Sal de cozinha</p>
-                    <img src="imagens/produtos/sal.png" class="imgcards">
-                </div>
-                <div class="cards">
-                    <p class="paragrafos">Açucar</p>
-                    <img src="imagens/produtos/acucar.png" class="imgcards">
-                </div>
-                <div class="cards">
-                    <p class="paragrafos">Molho de tomate</p>
-                    <img src="imagens/produtos/tomate.png" class="imgcards">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12" style="display: flex;">
-                <div class="cards">
-                    <p class="paragrafos">Arroz</p>
-                    <img src="imagens/produtos/arroz.png" class="imgcards">
-                </div>
-                <div class="cards">
-                    <p class="paragrafos">Feijão</p>
-                    <img src="imagens/produtos/feijao.png" class="imgcards">
-                </div>
-                <div class="cards">
-                    <p class="paragrafos">Óleo de cozinha</p>
-                    <img src="imagens/produtos/oleo.png" class="imgcards">
-                </div>
-                <div class="cards">
-                    <p class="paragrafos">Sal de cozinha</p>
-                    <img src="imagens/produtos/sal.png" class="imgcards">
-                </div>
-                <div class="cards">
-                    <p class="paragrafos">Açucar</p>
-                    <img src="imagens/produtos/acucar.png" class="imgcards">
-                </div>
-                <div class="cards">
-                    <p class="paragrafos">Molho de tomate</p>
-                    <img src="imagens/produtos/tomate.png" class="imgcards">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-xs-4" style="margin: 2%;">
+                        <div class="cards">
+                            <p class="paragrafos">Arroz</p>
+                            <img src="imagens/produtos/arroz.png" class="imgcards">
+                        </div>
+                    </div>
+                    <div class="col-xs-4" style="margin: 2%;">
+                        <div class="cards">
+                            <p class="paragrafos">Feijão</p>
+                            <img src="imagens/produtos/feijao.png" class="imgcards">
+                        </div>
+                    </div>
+                    <div class="col-xs-4" style="margin: 2%;">
+                        <div class="cards">
+                            <p class="paragrafos">Óleo de cozinha</p>
+                            <img src="imagens/produtos/oleo.png" class="imgcards">
+                        </div>
+                    </div>
+                    <div class="col-xs-4" style="margin: 2%;">
+                        <div class="cards">
+                            <p class="paragrafos">Sal de cozinha</p>
+                            <img src="imagens/produtos/sal.png" class="imgcards">
+                        </div>
+                    </div>
+                    <div class="col-xs-4" style="margin: 2%;">
+                        <div class="cards">
+                            <p class="paragrafos">Açucar</p>
+                            <img src="imagens/produtos/acucar.png" class="imgcards">
+                        </div>
+                    </div>
+                    <div class="col-xs-4" style="margin: 2%;">
+                        <div class="cards">
+                            <p class="paragrafos">Molho de tomate</p>
+                            <img src="imagens/produtos/tomate.png" class="imgcards">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="alimentoselecionado"></div>
-        </div>
-    </div>
-    <div class="container-fluid" style="margin-top:5%;">
-        <div class="row">
-            <div class="col-md-12" style="background-color: rgb(237,28,36);text-align: center;">
-                <img src="imagens/logo site.png" width="40px">
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-xs-4" style="margin: 2%;">
+                        <div class="cards">
+                            <p class="paragrafos">Arroz</p>
+                            <img src="imagens/produtos/arroz.png" class="imgcards">
+                        </div>
+                    </div>
+                    <div class="col-xs-4" style="margin: 2%;">
+                        <div class="cards">
+                            <p class="paragrafos">Feijão</p>
+                            <img src="imagens/produtos/feijao.png" class="imgcards">
+                        </div>
+                    </div>
+                    <div class="col-xs-4" style="margin: 2%;">
+                        <div class="cards">
+                            <p class="paragrafos">Óleo de cozinha</p>
+                            <img src="imagens/produtos/oleo.png" class="imgcards">
+                        </div>
+                    </div>
+                    <div class="col-xs-4" style="margin: 2%;">
+                        <div class="cards">
+                            <p class="paragrafos">Sal de cozinha</p>
+                            <img src="imagens/produtos/sal.png" class="imgcards">
+                        </div>
+                    </div>
+                    <div class="col-xs-4" style="margin: 2%;">
+                        <div class="cards">
+                            <p class="paragrafos">Açucar</p>
+                            <img src="imagens/produtos/acucar.png" class="imgcards">
+                        </div>
+                    </div>
+                    <div class="col-xs-4" style="margin: 2%;">
+                        <div class="cards">
+                            <p class="paragrafos">Molho de tomate</p>
+                            <img src="imagens/produtos/tomate.png" class="imgcards">
+                        </div>
+                    </div>
+                </div>
             </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </div>
 </body>

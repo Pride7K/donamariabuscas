@@ -21,33 +21,32 @@
                 <a href="index.html"><img src="imagens/Maior comparador do brasil.png"></a>
             </div>
             <div class="col-md-2 offset-md-4" style="display: flex;">
-                <div class="divbotao" id="botaoaparecer">
-                    <input type="image" src="imagens/grandmother (3).png">
-                    <br>
-                </div>
-                <p style="animation: blinker 1s linear infinite;border-radius: 15px;padding: 1%;" id="botaoaparecer3">
-                    Caso precise de
-                    ajuda eu estou aqui</p>
-            </div>
-            <div class="sumir" id="div1">
-                <div style="background-color: brown;width: 100%;height: 100px;padding-top:5%;">
-                    <div style="margin-left: 95%;color: white;">
-                        <input type="image" src="imagens/down-arrow.png" id="buttonDivChat">
+                    <div class="divbotao" id="botaoaparecer">
+                        <input type="image" src="imagens/grandmother (3).png" >
+                        <br>
                     </div>
-                    <div style="background-color: brown;width: 100%;text-align: center;">
-                        ASSISTENTE VIRTUAL DONA MARIA
-                    </div>
+                    <p style="animation: blinker 1s linear infinite;border-radius: 15px;padding: 1%;" id="botaoaparecer3">Caso precise de
+                        ajuda eu estou aqui</p>
                 </div>
-                <div class=" chat-column" style="word-wrap: break-word;
+                <div class="sumir" id="div1">
+                    <div style="background-color: brown;width: 100%;height: 100px;padding-top:5%;">
+                        <div style="margin-left: 95%;color: white;">
+                            <input type="image" src="imagens/down-arrow.png" id="buttonDivChat">
+                        </div>
+                        <div style="background-color: brown;width: 100%;text-align: center;">
+                            ASSISTENTE VIRTUAL DONA MARIA
+                        </div>
+                    </div>
+                    <div class=" chat-column" style="word-wrap: break-word;
                                 line-height: 1.25rem;">
-                    <div id="chat" style="word-wrap: break-word;
+                        <div id="chat" style="word-wrap: break-word;
                                   line-height: 1.25rem;"></div>
-                    <label for="textInput" class="inputOutline">
-                        <input id="textInput" class="input responsive-column" autofocus placeholder="Diga algo"
-                            type="text">
-                    </label>
+                        <label for="textInput" class="inputOutline">
+                            <input id="textInput" class="input responsive-column" autofocus placeholder="Diga algo"
+                                type="text">
+                        </label>
+                    </div>
                 </div>
-            </div>
         </div>
     </div>
     <div class="container">
@@ -57,7 +56,7 @@
                 <h3 style="padding: 2%;"><strong>Cadastre-se</strong></h3>
                 <small class="text-muted" style="padding: 2%;">Por favor preencha todos os campos</small>
                 <hr>
-                <form action="">
+                <form action="/add" method="POST">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Primeiro nome">&nbsp;&nbsp;<input
                             type="text" class="form-control" placeholder="Ultimo nome">
@@ -71,17 +70,9 @@
                     <div class="input-group mb-3">
                         <input type="password" class="form-control" placeholder="Confirme sua senha">
                     </div>
-                    <button type="submit" style="border-style: none;background-color:whitesmoke;"><a href="#"
-                            class="btn btn-primary btn-lg active" role="button"
-                            aria-pressed="true">Cadastrar-se</a></button>
+                    <button type="submit"  class="btn btn-primary btn-lg active" role="button"
+                    aria-pressed="true" style="border-style: none;background-color:whitesmoke;">Cadastrar-se</button>
                 </form>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid" style="margin-top:5%;">
-        <div class="row">
-            <div class="col-md-12" style="background-color: rgb(237,28,36);text-align: center;">
-                <img src="imagens/logo site.png" width="40px">
             </div>
         </div>
     </div>
