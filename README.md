@@ -1,4 +1,4 @@
-# donamariabuscas
+# donamariabuscas - Comparador de preços
 TCC para etec
 
 >navegue até o diretório do projeto
