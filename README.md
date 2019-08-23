@@ -1,6 +1,16 @@
 # donamariabuscas - Comparador de preços
 TCC para etec
 
+*Requisitos para rodar esta aplicação
+
+
+
+>Versão mais recente do node instalada em seu pc
+
+
+
+////
+
 >abra o cmd e navegue até o diretório do projeto
 
 
