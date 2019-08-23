@@ -13,4 +13,4 @@ TCC para etec
 
 >abra o cmd e navegue até o diretorio da pasta novamente
 
->node app.js
+>npm start 
