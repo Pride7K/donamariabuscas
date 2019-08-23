@@ -21,15 +21,19 @@ app.use(express.static('./public'));
 /////////////////////////////////////////
 
 //////////// banco  ////////////////////
-const banco = new Sequelize("tccteste", "root", "123",
+
+/*
+
+const banco = new Sequelize("chatubademesquita", "root", "etecia",
   {
-    host: "localhost",
-    dialect: "mysql"
+    host:'localhost',
+    DB_HOSTNAME: "mysql",
+    dialect:"mysql",
   });
 
 banco.authenticate().then(function () { console.log("Conexao com banco OK") }).catch(function (a) { console.log("Aparentemente ocorreu um erro no banco: " + a) });
 
-/////////////////////////////////////////////////////
+*/
 
 //conexao com o chatbot
 const AssistantV2 = require('ibm-watson/assistant/v1');
@@ -68,12 +72,13 @@ const port = NormalizarPorta(process.env.PORT || "3000");
 const index = require("./src/rotas/index-rota");
 const produtos = require("./src/rotas/produtos-rota");
 
+/*
 
-
-app.post("/add", function (req, resp) {
+app.post("/produtos", function (req, resp) {
   resp.send("nice");
 })
 
+*/
 
 app.use("/", index)
 app.use("/produtos", produtos)
