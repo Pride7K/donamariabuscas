@@ -9,6 +9,9 @@ TCC para etec
 
 >execute npm install para trazer as bibliotecas utilizadas.
 
+
+!(https://github.com/Pride7K/imagens/blob/master/download2.png?raw=true)
+
 >Extraia o rar de imagens
 
 >Extraia o rar public
