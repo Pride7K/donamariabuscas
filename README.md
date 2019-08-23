@@ -12,11 +12,9 @@ TCC para etec
 
 ![teste](https://github.com/Pride7K/imagens/blob/master/download2.png?raw=true)
 
->Extraia o rar de imagens
 
 >Extraia o rar public
 
->copie as paginas html,css e js e substitua pelas que estão dentro da pasta public
 
 >abra o cmd e navegue até o diretorio da pasta novamente
 
