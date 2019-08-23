@@ -2,7 +2,7 @@
 TCC para etec
 
 >abra o cmd e navegue até o diretório do projeto
-https://github.com/Pride7K/imagens/download(1).png
+
 >execute npm install para trazer as bibliotecas utilizadas.
 
 >Extraia o rar de imagens
