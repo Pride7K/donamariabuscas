@@ -21,3 +21,12 @@ TCC para etec
 >abra o cmd e navegue até o diretorio da pasta novamente
 
 >npm start 
+
+
+Se você executou o passo a passo corretamente está mensagem que ira aparecer.Agora é só abrir o seu navegador e digitar na URL
+
+localhost:3000 que estara funcionando corretamente
+
+
+![teste](https://github.com/Pride7K/imagens/blob/master/download3.png?raw=true)
+
