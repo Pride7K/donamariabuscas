@@ -22,9 +22,9 @@ app.use(express.static('./public'));
 
 //////////// banco  ////////////////////
 
-/*
 
-const banco = new Sequelize("chatubademesquita", "root", "etecia",
+
+const banco = new Sequelize("tccteste", "root", "123",
   {
     host:'localhost',
     DB_HOSTNAME: "mysql",
@@ -33,7 +33,7 @@ const banco = new Sequelize("chatubademesquita", "root", "etecia",
 
 banco.authenticate().then(function () { console.log("Conexao com banco OK") }).catch(function (a) { console.log("Aparentemente ocorreu um erro no banco: " + a) });
 
-*/
+
 
 //conexao com o chatbot
 const AssistantV2 = require('ibm-watson/assistant/v1');
