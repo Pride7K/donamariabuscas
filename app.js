@@ -14,26 +14,11 @@ const router = express.Router();
 
 
 app.use(bodyParser.json());
+app.set(bodyParser.urlencoded( {extended: false} ));
 app.use(express.static('./public'));
 
 
-
-/////////////////////////////////////////
-
-//////////// banco  ////////////////////
-
-
-
-const banco = new Sequelize("tccteste", "root", "123",
-  {
-    host:'localhost',
-    DB_HOSTNAME: "mysql",
-    dialect:"mysql",
-  });
-
-banco.authenticate().then(function () { console.log("Conexao com banco OK") }).catch(function (a) { console.log("Aparentemente ocorreu um erro no banco: " + a) });
-
-
+////////////////////////////////////////////////////////
 
 //conexao com o chatbot
 const AssistantV2 = require('ibm-watson/assistant/v1');
@@ -69,19 +54,26 @@ app.post('/conversation/', (req, res) => {
 const port = NormalizarPorta(process.env.PORT || "3000");
 
 //trazer as rotas 
+
 const index = require("./src/rotas/index-rota");
 const produtos = require("./src/rotas/produtos-rota");
 
-/*
 
-app.post("/produtos", function (req, resp) {
-  resp.send("nice");
-})
-
-*/
-
-app.use("/", index)
+app.use("/sla", index)
 app.use("/produtos", produtos)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 server.listen(port, () => console.log(`Rodando na porta ${port}`));
