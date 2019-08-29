@@ -5,6 +5,10 @@ const Sequelize = require("sequelize");
 const http = require("http");
 const debug = require("debug")("TCC:app");
 const app = express();
+const handle = require("express-handlebars");
+
+app.engine("handlebars",handle({defaultLayout: "main"}));
+app.set("view engine","handlebars");
 
 
 const server = http.createServer(app);
