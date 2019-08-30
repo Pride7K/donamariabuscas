@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const Sequelize = require("sequelize");
 const http = require("http");
+const path = require("path")
 const debug = require("debug")("TCC:app");
 const app = express();
 const handle = require("express-handlebars");
@@ -63,7 +64,7 @@ const index = require("./src/rotas/index-rota");
 const produtos = require("./src/rotas/produtos-rota");
 
 
-app.use("/sla", index)
+app.use("/index", index)
 app.use("/produtos", produtos)
 
 
