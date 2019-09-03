@@ -7,38 +7,39 @@ const path = require("path")
 const debug = require("debug")("donamariabuscas-master:app");
 const app = express();
 const handle = require("express-handlebars");
+const router = express.Router();
+
+const server = http.createServer(app);
 
 
 ////////////Codigo QUE   O COMPILA CODIGO PARA JSON //////////////////
 
-app.set(bodyParser.urlencoded( {extended: true} ));
+
 app.use(bodyParser.json());
+app.set(bodyParser.urlencoded( {extended: false} ));
 app.use(express.static('./public'));
+app.use(express.static('../src/views'));
 
-const server = http.createServer(app);
-const router = express.Router();
+////// instanciamento das rotas //////
 
-//https://github.com/expressjs/body-parser
+const index = require("./src/rotas/index-rota");
+const produtos = require("./src/rotas/produtos-rota");
+
+///// normalização da porta
+
+const port = NormalizarPorta(process.env.PORT || "3000");
+
+
+////////////////////////////////////////////////////////
 
 
 app.engine("handlebars",handle({defaultLayout: "main"}));
 app.set("view engine","handlebars");
 
 
-//trazer as rotas 
-
-
-const index = require("./src/rotas/index-rota");
-const produtos = require("./src/rotas/produtos-rota");
-
-app.use("/a", index)
-app.use("/produtos", produtos)
-
-
-
-////////////////////////////////////////////////////////
 
 //conexao com o chatbot
+
 const AssistantV2 = require('ibm-watson/assistant/v1');
 
 const assistant = new AssistantV2({
@@ -48,6 +49,7 @@ const assistant = new AssistantV2({
 });
 
 //rota do bot
+
 app.post('/conversation/', (req, res) => {
   const { text, context = {} } = req.body;
 
@@ -66,31 +68,22 @@ app.post('/conversation/', (req, res) => {
     }
   });
 });
+
 //////////////////////////////////////////////////////////////////
 
 
-const port = NormalizarPorta(process.env.PORT || "3000");
+//trazer as rotas 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+app.use("/", index)
+app.use("/produtos", produtos)
 
 
 
 server.listen(port, () => console.log(`Rodando na porta ${port}`));
 server.on("error", TratandoErro);
 server.on("listening", onListening);
+
 
 function NormalizarPorta(val) {
   const port = parseInt(val, 10)
