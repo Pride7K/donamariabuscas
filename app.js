@@ -4,23 +4,36 @@ const bodyParser = require('body-parser');
 const Sequelize = require("sequelize");
 const http = require("http");
 const path = require("path")
-const debug = require("debug")("TCC:app");
+const debug = require("debug")("donamariabuscas-master:app");
 const app = express();
 const handle = require("express-handlebars");
+
+
+////////////Codigo QUE   O COMPILA CODIGO PARA JSON //////////////////
+
+app.set(bodyParser.urlencoded( {extended: true} ));
+app.use(bodyParser.json());
+app.use(express.static('./public'));
+
+const server = http.createServer(app);
+const router = express.Router();
+
+//https://github.com/expressjs/body-parser
+
 
 app.engine("handlebars",handle({defaultLayout: "main"}));
 app.set("view engine","handlebars");
 
 
-const server = http.createServer(app);
-const router = express.Router();
-
-////////////Codigo QUE   O COMPILA CODIGO PARA JSON //////////////////
+//trazer as rotas 
 
 
-app.use(bodyParser.json());
-app.set(bodyParser.urlencoded( {extended: false} ));
-app.use(express.static('./public'));
+const index = require("./src/rotas/index-rota");
+const produtos = require("./src/rotas/produtos-rota");
+
+app.use("/index", index)
+app.use("/produtos", produtos)
+
 
 
 ////////////////////////////////////////////////////////
@@ -58,14 +71,8 @@ app.post('/conversation/', (req, res) => {
 
 const port = NormalizarPorta(process.env.PORT || "3000");
 
-//trazer as rotas 
-
-const index = require("./src/rotas/index-rota");
-const produtos = require("./src/rotas/produtos-rota");
 
 
-app.use("/index", index)
-app.use("/produtos", produtos)
 
 
 
