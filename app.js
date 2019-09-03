@@ -31,7 +31,7 @@ app.set("view engine","handlebars");
 const index = require("./src/rotas/index-rota");
 const produtos = require("./src/rotas/produtos-rota");
 
-app.use("/index", index)
+app.use("/a", index)
 app.use("/produtos", produtos)
 
 
