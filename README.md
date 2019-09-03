@@ -47,3 +47,7 @@ Agora é só abrir o seu navegador e digitar na URL
 
 localhost:3000 que estara funcionando corretamente
 
+### ATENÇÃO
+
+>Ações envolvendo o banco não iram funcionar pelo simples fato de não haver conexao local do banco com o programa do seu computador
+
