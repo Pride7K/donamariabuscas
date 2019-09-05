@@ -13,7 +13,13 @@ const handle = require("express-handlebars");
 
 app.set(bodyParser.urlencoded( {extended: true} ));
 app.use(bodyParser.json());
-app.use(express.static('./public'));
+
+// manipulção de arquivos estaticos 
+
+app.use(express.static(path.join(__dirname,"public")));
+
+//////////////////////////////////////////////////////////////////////////
+
 
 const server = http.createServer(app);
 const router = express.Router();
@@ -25,14 +31,20 @@ app.engine("handlebars",handle({defaultLayout: "main"}));
 app.set("view engine","handlebars");
 
 
-//trazer as rotas 
+//trazer as rotas e usa-las
 
 
 const index = require("./src/rotas/index-rota");
 const produtos = require("./src/rotas/produtos-rota");
+const login = require("./src/rotas/login-rota");
 
-app.use("/a", index)
+app.use("/login", login);
+app.use("/index", index)
 app.use("/produtos", produtos)
+
+
+// manipulação de arquivos estaticos 
+
 
 
 
@@ -72,25 +84,18 @@ app.post('/conversation/', (req, res) => {
 const port = NormalizarPorta(process.env.PORT || "3000");
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/////////////////// start do server //////////////////
 
 server.listen(port, () => console.log(`Rodando na porta ${port}`));
 server.on("error", TratandoErro);
 server.on("listening", onListening);
+
+
+/////////////////////////////////////////////////////////////////
+
+
+
+////////////// Tratamento de erros /////////////////////////////
 
 function NormalizarPorta(val) {
   const port = parseInt(val, 10)
