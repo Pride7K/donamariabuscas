@@ -4,9 +4,31 @@ const bodyParser = require('body-parser');
 const Sequelize = require("sequelize");
 const http = require("http");
 const path = require("path")
+const session = require("express-session");
+const flash = require("connect-flash");
 const debug = require("debug")("donamariabuscas-master:app");
 const app = express();
 const handle = require("express-handlebars");
+
+app.use(session({
+    //// chave pra gerar sessao
+    secret:"sjdjsdsadsçaldksalç",
+    resave:true,
+    saveUninitialized:true
+}))
+app.use(flash());
+
+
+///////////////////// configurando middleware
+
+app.use(function(req,resp,next)
+       {
+    //variaveis globais usando locals
+    resp.locals.success_msg = req.flash("success_msg");
+    resp.locals.error_msg = req.flash("error_msg");
+    next();
+})
+
 
 
 ////////////Codigo QUE   O COMPILA CODIGO PARA JSON //////////////////
@@ -19,6 +41,17 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname,"public")));
 
 //////////////////////////////////////////////////////////////////////////
+
+
+////// middleware = tratamento da requisição //////////
+
+app.use(function(req,resp,next)
+       {
+    console.log("middleware")
+    next();
+})
+
+////////////////////////////////////////////////////////////////
 
 
 const server = http.createServer(app);
