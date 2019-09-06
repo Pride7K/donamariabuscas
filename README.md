@@ -31,6 +31,8 @@ TCC para etec
 
 >Extraia o rar src
 
+>Extraia o rar views
+
 
 >abra o cmd e navegue até o diretorio da pasta novamente
 
