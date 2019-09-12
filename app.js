@@ -71,11 +71,13 @@ const index = require("./src/rotas/index-rota");
 const produtos = require("./src/rotas/produtos-rota");
 const cadastro = require("./src/rotas/cadastro-rota");
 const login = require("./src/rotas/login-rota");
+const adminproduto = require("./src/rotas/adminproduto-rota");
 
 app.use("/login", login);
 app.use("/index", index);
 app.use("/produtos", produtos);
 app.use("/cadastro", cadastro);
+app.use("/adminproduto", adminproduto);
 
 
 // manipulação de arquivos estaticos 
