@@ -76,7 +76,7 @@ const adminproduto = require("./src/rotas/adminproduto-rota");
 app.use("/login", login);
 app.use("/index", index);
 app.use("/produtos", produtos);
-app.use("/cadastro", cadastro);
+app.use("/cadastrar", cadastro);
 app.use("/adminproduto", adminproduto);
 
 
