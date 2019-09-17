@@ -9,6 +9,9 @@ const flash = require("connect-flash");
 const debug = require("debug")("donamariabuscas-master:app");
 const app = express();
 const handle = require("express-handlebars");
+const passport= require("passport");
+require("./config/auth")(passport);
+
 
 app.use(session({
     //// chave pra gerar sessao
@@ -16,6 +19,10 @@ app.use(session({
     resave:true,
     saveUninitialized:true
 }))
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(flash());
 
 
