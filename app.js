@@ -33,6 +33,8 @@ app.use(function(req,resp,next)
     //variaveis globais usando locals
     resp.locals.success_msg = req.flash("success_msg");
     resp.locals.error_msg = req.flash("error_msg");
+    resp.locals.error = req.flash("error");
+    resp.locals.user = req.user || null ;
     next();
 })
 
@@ -51,13 +53,13 @@ app.use(express.static(path.join(__dirname,"public")));
 
 
 ////// middleware = tratamento da requisição //////////
-
+/*
 app.use(function(req,resp,next)
        {
     console.log("middleware")
     next();
 })
-
+*/
 ////////////////////////////////////////////////////////////////
 
 
@@ -76,9 +78,9 @@ app.set("view engine","handlebars");
 
 const index = require("./src/rotas/index-rota");
 const produtos = require("./src/rotas/produtos-rota");
-const cadastro = require("./src/rotas/cadastro-rota");
-const login = require("./src/rotas/login-rota");
-const adminproduto = require("./src/rotas/adminproduto-rota");
+const cadastro = require("./src/rotas/usuario/cadastro-rota");
+const login = require("./src/rotas/usuario/login-rota");
+const adminproduto = require("./src/rotas/admin/adminproduto-rota");
 
 app.use("/login", login);
 app.use("/index", index);
@@ -125,7 +127,7 @@ app.post('/conversation/', (req, res) => {
 //////////////////////////////////////////////////////////////////
 
 
-const port = NormalizarPorta(process.env.PORT || "3000");
+const port = process.env.PORT || 3000 ;
 
 
 /////////////////// start do server //////////////////

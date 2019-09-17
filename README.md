@@ -33,14 +33,6 @@ TCC para etec
 
 >Extraia o rar views
 
->Extraia o rar config
-
->Extraia o rar helpers
-
->Vá até a pasta src/models/conexao.js
-
->configure as entradas para o seu banco
-
 
 >abra o cmd e navegue até o diretorio da pasta novamente
 
