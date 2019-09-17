@@ -33,6 +33,10 @@ TCC para etec
 
 >Extraia o rar views
 
+>Extraia o rar config
+
+>Extraia o rar helpers
+
 
 >abra o cmd e navegue até o diretorio da pasta novamente
 
