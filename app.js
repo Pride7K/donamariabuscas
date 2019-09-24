@@ -93,8 +93,12 @@ app.use("/tp_cadastro",tipo_cadastro);
 
 // manipulação de arquivos estaticos 
 
+const api = require("@what3words/api");
+            
+api.setOptions({ key: "what3words-api-key" });
 
-
+api.convertTo3wa({lat:51.520847, lng:-0.195521})
+  .then(data => console.log(data));
 
 ////////////////////////////////////////////////////////
 
