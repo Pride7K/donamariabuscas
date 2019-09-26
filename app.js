@@ -9,15 +9,24 @@ const flash = require("connect-flash");
 const debug = require("debug")("donamariabuscas-master:app");
 const app = express();
 const handle = require("express-handlebars");
-const passport= require("passport");
+const passport = require("passport");
 require("./config/auth")(passport);
 
 
+global.EMAIL2 = null;
+global.LATITU = 0;
+global.LONGITU = 0;
+
+global.EADMIN = null;
+
+
+
+
 app.use(session({
-    //// chave pra gerar sessao
-    secret:"sjdjsdsadsçaldksalç",
-    resave:true,
-    saveUninitialized:true
+  //// chave pra gerar sessao
+  secret: "sjdjsdsadsçaldksalç",
+  resave: true,
+  saveUninitialized: true
 }))
 
 app.use(passport.initialize());
@@ -26,28 +35,28 @@ app.use(passport.session());
 app.use(flash());
 
 
+
 ///////////////////// configurando middleware
 
-app.use(function(req,resp,next)
-       {
-    //variaveis globais usando locals
-    resp.locals.success_msg = req.flash("success_msg");
-    resp.locals.error_msg = req.flash("error_msg");
-    resp.locals.error = req.flash("error");
-    resp.locals.user = req.user || null ;
-    next();
+app.use(function (req, resp, next) {
+  //variaveis globais usando locals
+  resp.locals.success_msg = req.flash("success_msg");
+  resp.locals.error_msg = req.flash("error_msg");
+  resp.locals.error = req.flash("error");
+  resp.locals.user = req.user || null;
+  next();
 })
 
 
 
 ////////////Codigo QUE   O COMPILA CODIGO PARA JSON //////////////////
 
-app.set(bodyParser.urlencoded( {extended: true} ));
+app.set(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // manipulção de arquivos estaticos 
 
-app.use(express.static(path.join(__dirname,"public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 //////////////////////////////////////////////////////////////////////////
 
@@ -69,8 +78,8 @@ const router = express.Router();
 //https://github.com/expressjs/body-parser
 
 
-app.engine("handlebars",handle({defaultLayout: "main"}));
-app.set("view engine","handlebars");
+app.engine("handlebars", handle({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 
 //trazer as rotas e usa-las
@@ -82,23 +91,22 @@ const cadastro = require("./src/rotas/usuario/cadastro-rota");
 const login = require("./src/rotas/usuario/login-rota");
 const adminproduto = require("./src/rotas/admin/adminproduto-rota");
 const tipo_cadastro = require("./src/rotas/tipo_cadastro-rota");
+const ofertas = require("./src/rotas/ofertas-rota");
+const adminusuario = require("./src/rotas/admin/adminusuario-rota");
 
 app.use("/login", login);
 app.use("/index", index);
 app.use("/produtos", produtos);
 app.use("/cadastrar", cadastro);
 app.use("/adminproduto", adminproduto);
-app.use("/tp_cadastro",tipo_cadastro);
-
+app.use("/tp_cadastro", tipo_cadastro);
+app.use("/ofertas",ofertas);
+app.use("/controleusuarios",adminusuario);
 
 // manipulação de arquivos estaticos 
 
-const api = require("@what3words/api");
-            
-api.setOptions({ key: "what3words-api-key" });
 
-api.convertTo3wa({lat:51.520847, lng:-0.195521})
-  .then(data => console.log(data));
+
 
 ////////////////////////////////////////////////////////
 
@@ -133,7 +141,7 @@ app.post('/conversation/', (req, res) => {
 //////////////////////////////////////////////////////////////////
 
 
-const port = process.env.PORT || 3000 ;
+const port = process.env.PORT || 3000;
 
 
 /////////////////// start do server //////////////////
