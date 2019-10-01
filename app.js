@@ -17,7 +17,6 @@ global.EMAIL2 = null;
 global.LATITU = 0;
 global.LONGITU = 0;
 
-global.EADMIN = null;
 
 
 
@@ -46,6 +45,7 @@ app.use(function (req, resp, next) {
   resp.locals.user = req.user || null;
   next();
 })
+
 
 
 
