@@ -27,11 +27,8 @@ TCC para etec
 
 
 
->Extraia o rar public
+>Extraia todos os arquivos .rar
 
->Extraia o rar src
-
->Extraia o rar views
 
 
 >abra o cmd e navegue até o diretorio da pasta novamente
