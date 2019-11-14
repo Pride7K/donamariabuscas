@@ -10,8 +10,8 @@ const debug = require("debug")("donamariabuscas-master:app");
 const app = express();
 const handle = require("express-handlebars");
 const passport = require("passport");
-require("./config/auth")(passport);
 
+require("./config/auth")(passport);
 
 global.EMAIL2 = null;
 global.LATITU = 0;
@@ -30,6 +30,8 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+
 
 app.use(flash());
 
