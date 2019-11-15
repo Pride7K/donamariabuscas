@@ -9,14 +9,16 @@ const flash = require("connect-flash");
 const debug = require("debug")("donamariabuscas-master:app");
 const app = express();
 const handle = require("express-handlebars");
+
 const passport = require("passport");
 
 require("./config/auth")(passport);
 
+
 global.EMAIL2 = null;
 global.LATITU = 0;
 global.LONGITU = 0;
-
+global.TESTE = ""
 
 
 
@@ -30,7 +32,6 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-
 
 
 app.use(flash());
