@@ -99,7 +99,7 @@ const adminusuario = require("./src/rotas/admin/adminusuario-rota");
 const redefinir_senha = require("./src/rotas/usuario/redefinir_senha-rota");
 const sobrenos = require("./src/rotas/sobrenos-rota");
 const gerenciar_cadastro = require("./src/rotas/usuario/gerenciar_cadastro-rota");
-
+const ajuda = require("./src/rotas/ajuda-rota");
 
 app.use("/login", login);
 app.use("/index", index);
@@ -112,6 +112,7 @@ app.use("/controleusuarios",adminusuario);
 app.use("/redefinir_senha",redefinir_senha);
 app.use("/gerenc_conta",gerenciar_cadastro);
 app.use("/sobrenos",sobrenos);
+app.use("/ajuda",ajuda);
 // manipulação de arquivos estaticos 
 
 
