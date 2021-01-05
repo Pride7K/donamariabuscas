@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@what3words/api": "^3.1.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "chart.js": "^2.9.3",
