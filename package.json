@@ -33,7 +33,7 @@
     "path": "^0.12.7",
     "sendgrid": "^2.0.0",
     "sequelize": "^5.15.1",
-    "sharp": "^0.23.1",
+    "sharp": "^0.30.5",
     "watson-developer-cloud": "^4.0.1"
   },
   "devDependencies": {
