@@ -16,7 +16,7 @@
     "chart.js": "^2.9.3",
     "connect-flash": "^0.1.1",
     "debug": "^4.1.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-handlebars": "^3.1.0",
     "express-session": "^1.16.2",
     "file-system": "^2.2.2",
